@@ -27,6 +27,9 @@ set mouse=a "allow mouse usage
 set cmdheight=2 "sets cmd height to 2 lines
 set number "show line nnumbers
 set pastetoggle=<F11> "F11 toggles paste and nopaste modes
+set foldmethod=syntax
+set foldlevel=2
+set foldclose=all
 " ----
 " Identation options ----
 set shiftwidth=4 "change tab to 4 spaces
@@ -48,3 +51,6 @@ set background=dark
 let g:gruvbox_bold=1
 let g:gruvbox_termcolor=256
 " ---
+
+"let g:identLine_setColors=0
+let g:identLine_char = 'U+DFA0'
