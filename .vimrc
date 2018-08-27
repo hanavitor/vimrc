@@ -1,6 +1,30 @@
-" Pathogen ---
-execute pathogen#infect()
-" ---
+filetype off                  " required
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'morhetz/gruvbox'
+Plugin 'Yggdroot/indentLine'
+Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'tpope/vim-fugitive'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
 
 " Must have features ---
 set nocompatible
@@ -48,8 +72,8 @@ noremap <C-L> :nohl<CR><C-L>
 " Gruvbox configs ---
 colorscheme gruvbox
 set background=dark
-let g:gruvbox_bold=1
-let g:gruvbox_termcolor=256
+let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_termcolor='256'
 " ---
 
 "let g:identLine_setColors=0
