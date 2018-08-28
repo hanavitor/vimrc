@@ -11,6 +11,11 @@ Plugin 'morhetz/gruvbox'
 Plugin 'Yggdroot/indentLine'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'tpope/vim-fugitive'
+Plugin 'itchyny/lightline.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-eunuch'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -76,5 +81,16 @@ let g:gruvbox_contrast_dark='hard'
 let g:gruvbox_termcolor='256'
 " ---
 
+" Identline configs ---
 "let g:identLine_setColors=0
 let g:identLine_char = 'U+DFA0'
+" ---
+
+" Lightline configs ---
+let g:lightline = {
+    \'colorscheme': 'jellybeans',
+    \}
+
+" NERDTree configs ---
+map <C-K> :NERDTreeToggle<CR>
+"---
