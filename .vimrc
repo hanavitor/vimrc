@@ -15,7 +15,8 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-eunuch'
 Plugin 'terryma/vim-multiple-cursors'
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'vim-scripts/Conque-GDB'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -45,6 +46,7 @@ set showcmd "show commands in the last line
 set hlsearch "highlights search
 " ----
 " Other options ----
+set tabpagemax=100
 set ignorecase "case insensitive search except for capital letter
 set smartcase "case insensitive search except for capital letter
 set backspace=indent,eol,start "backspace over autoindent
@@ -56,9 +58,6 @@ set mouse=a "allow mouse usage
 set cmdheight=2 "sets cmd height to 2 lines
 set number "show line nnumbers
 set pastetoggle=<F11> "F11 toggles paste and nopaste modes
-set foldmethod=syntax
-set foldlevel=2
-set foldclose=all
 " ----
 " Identation options ----
 set shiftwidth=4 "change tab to 4 spaces
@@ -81,9 +80,10 @@ let g:gruvbox_contrast_dark='hard'
 let g:gruvbox_termcolor='256'
 " ---
 
+"let g:indentLine_enabled = 0
 " Identline configs ---
 "let g:identLine_setColors=0
-let g:identLine_char = 'U+DFA0'
+let g:identLine_char = '|'
 " ---
 
 " Lightline configs ---
@@ -93,4 +93,8 @@ let g:lightline = {
 
 " NERDTree configs ---
 map <C-K> :NERDTreeToggle<CR>
+"---
+
+" YMC configs ---
+let g:ycm_autoclose_preview_window_after_insertion = 1
 "---
