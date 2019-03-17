@@ -56,8 +56,11 @@ set ruler "cursor position
 set laststatus=2 "Always displays status line
 set mouse=a "allow mouse usage
 set cmdheight=2 "sets cmd height to 2 lines
-set number "show line nnumbers
+set relativenumber "show line nnumbers
+set number
 set pastetoggle=<F11> "F11 toggles paste and nopaste modes
+set splitbelow
+set termwinsize=10x0
 " ----
 " Identation options ----
 set shiftwidth=4 "change tab to 4 spaces
@@ -97,4 +100,5 @@ map <C-K> :NERDTreeToggle<CR>
 
 " YMC configs ---
 let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_global_ycm_extra_conf = '/home/vitorh/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py' 
 "---
